@@ -1,0 +1,150 @@
+/* Adicionando a largura e altura do container da esquerda*/
+.container-historia {
+    box-sizing: border-box;
+    width: 40%;
+    min-width: 600px;
+    height: 70vh;
+    min-height: 700px;
+    padding: 6em 2em;
+
+    position: relative;
+}
+
+/* Formatando a caixa de historia*/
+#alunoHistoria {
+    box-sizing: border-box;
+
+    position: relative;
+    z-index: +2;
+
+    width: 100%;
+    height: 80%;
+    padding: 2em;
+    font-size: 2rem;
+    
+    color: #303030;
+    resize: none;
+    border: 5px dashed #202020;
+    border-radius: 72px;
+    background: #f0f0f0;
+    font-family: var(--fonte-principal);
+
+
+    transition: 0.5s ease-in-out;
+}
+
+/* Formatando o placeholder da caixa de historia*/
+#alunoHistoria::placeholder {
+    color: #868686;
+    font-family: var(--fonte-principal);
+}
+
+/* Tirando a linha ao selecionar padrão e aplicando roxo*/
+#alunoHistoria:focus {
+    outline: none;
+    border-color: purple;
+}
+
+/* Formatando o BTN ENVIAR*/
+.btn-enviar {
+    box-sizing: border-box;
+
+    display: block;
+    width: 80%;
+    margin: 2em auto 0 auto;
+    background-color: rgb(240, 248, 255);
+    color: black;
+    border-radius: 15px;
+    padding: .6em 0;
+    font-weight: 700;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-family: var(--fonte-secundaria);
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    box-shadow: 6px 6px 5px #303030;
+    transition: 0.2s ease-in-out;
+}
+
+/* Formatando o BTN ENVIAR ao colocar o mouse por cima*/
+.btn-enviar:hover {
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+/* Formatando o BTN ENVIAR ao clicar */
+.btn-enviar:active {
+    transition: 0.1s ease-in-out;
+    box-shadow: 3px 3px 5px rgb(56, 56, 56);
+}
+
+/* Tirando a linha padrão do BTN ENVIAR */
+.btn-enviar:focus {
+    outline: none;
+}
+
+
+/* */
+
+
+/* Formatando o monstrinho Roxão*/
+#monstroRoxao {
+    z-index: +1;
+    /*height: 40vh;*/
+    width: 20vw;
+    min-width: 400px;
+    position: absolute;
+    right: 100%;
+    bottom: 80%;
+    transform: translate(50%, 50%) rotate(-45deg);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Comportamento do site a parti de 1028px de largura*/
+@media (max-width: 1028px) {
+    /*Devido ao Flex Wrap, os elementos irão ficar um embaixo do outro, então adicionamos um margin para afasta-los */
+    .container-historia {
+        margin-top: 8em;
+    }
+
+    /* Mudanndo o posicionamento do Roxão para a parte superior central*/
+    #monstroRoxao {
+        right: 50%;
+        bottom: 95%;
+        min-width: 300px;
+        /* Inserindo novamente o transform, porem sem o translate, para assim ele ficar reto*/
+        transform: translate(50%, 50%);
+    }
+}
+
+/* Comportamento do site a parti de 768px de largura*/
+@media (max-width: 768px) {
+
+    /* Ajustando o container com os dados dos alunos, reconfigurando a largura*/
+    .container-historia {
+        width: 90%;
+        min-width: 300px;
+    }
+
+    /* Ajustando o tamanho da fonte*/
+    #alunoHistoria {
+        font-size: 1.3rem;
+    }
+}
+
+/* Comportamento do site a parti de 468px de largura*/
+@media (max-width: 468px) {
+
+    /* Ajustando o tamanho da fonte*/
+    #alunoHistoria {
+        font-size: 1rem;
+    }
+    
+    /* Ajustando o tamanho do Roxão*/
+    #monstroRoxao {
+        min-width: 250px;
+    }
+    
+}

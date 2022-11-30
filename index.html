@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Reset total-->
+    <link rel="stylesheet" href="css/reset.css">
+    <!--Adicionando Fonte DynaPuff e Baloo2 pelo GoogleFonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&family=DynaPuff:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- CSS Principal-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Projeto Ferias</title>
+</head>
+
+<body>
+
+    <form class="container-formFerias" action="">
+        <!-- Container da esquerda, contendo o titulo + todas informações do aluno  -->
+        <section class="container-aluno">
+            <h2 class="titulo">Projeto</h2>
+            <h2 class="titulo">Ferias</h2>
+            <!-- Agrupando tudo o que não for o titulo para a responsabilidade ser pratica.-->
+            <div class="container-dados-alunos">
+                <!-- Separando os itens por div, para uma responsibilidade mais facil -->
+                <!-- Area do NOME do aluno -->
+                <div class="dados-aluno">
+                    <h2 class="topico">Me chamo...</h2>
+                    <input type="text" name="alunoNome" id="alunoNome" placeholder="Seu lindo nome aqui">
+                </div>
+
+                <!-- Area da TURMA do aluno -->
+                <div class="dados-aluno">
+                    <h2 class="topico">Sou da...</h2>
+                    <select name="alunoTurma" id="alunoTurma">
+                        <option value="turmaA">Turma A</option>
+                        <option value="turmaB">Turma B</option>
+                        <option value="turmaC">Turma C</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Container da historia do aluno + btn enviar dados -->
+        <section class="container-historia">
+            <img id="monstroRoxao" src="imagens/monstro.png" alt="">
+            <textarea name="alunoHistoria" id="alunoHistoria" cols="30" rows="10"
+                placeholder="Nas minhas ferias..."></textarea>
+            <input type="file" placeholder="insira o arquivo">
+            <button type="submit" class="btn-enviar">Enviar</button>
+        </section>
+    </form>
+
+
+
+</body>
+
+</html>

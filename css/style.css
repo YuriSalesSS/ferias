@@ -1,0 +1,163 @@
+@import url(alunoHistoria.css);
+
+/* Declarando as variaveis */
+:root {
+    --fonte-principal: 'DynaPuff', 'cursive';
+    --fonte-secundaria: 'Baloo 2', 'cursive';
+}
+
+.container-formFerias {
+    box-sizing: border-box;
+
+    background: rgb(38, 105, 83);
+    background: linear-gradient(0deg, rgba(38, 105, 83, 1) 9%, rgba(56, 156, 125, 1) 28%, rgba(114, 172, 154, 1) 71%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    min-height: 100vh;
+
+    /* Recortar isso para outro elemento pai que englobe tudo*/
+    /* Espaçando e alinhando todos os itens, alem de  deixar responsivel com FLEX WRAP*/
+    padding: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/* Formatando e aplicando todo alinhamento*/
+.container-aluno {
+    box-sizing: border-box;
+    background-color: #2020209c;
+    padding: 3em 2em;
+    border-radius: 24px 60px 24px 60px;
+
+    box-shadow: -10px 10px 8px rgba(74, 74, 74, 0.412);
+    position: relative;
+    z-index: +2;
+}
+
+/* Formatação do titulo */
+.titulo {
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    text-shadow: -4px 5px 3px #5b5b5b;
+}
+
+/* Alinhando "PROJETOS" para a ESQUERDA*/
+.titulo:nth-child(1) {
+    margin-right: 2.5em;
+}
+
+/* Alinhando "FERIAS" para a DIREITA*/
+.titulo:nth-child(2) {
+    margin-left: 3.5em;
+}
+
+/* tornando mais responsivo alunoNome e alunoTurma*/
+.container-dados-alunos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/* Expandindo o tamanho interno do elemento*/
+.dados-aluno {
+    box-sizing: border-box;
+
+    padding: 1em;
+    margin-top: 2em;
+    width: 270px;
+}
+
+/* Formatação de fonte e tamanho*/
+.topico {
+    font-family: var(--fonte-secundaria);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+
+/* Formatando input e select*/
+#alunoNome,
+#alunoTurma {
+    box-sizing: border-box;
+
+    width: 100%;
+    padding: .7em 1.5em;
+    margin-top: .5em;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    font-family: var(--fonte-principal);
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: transparent;
+
+    transition: 0.3s ease-in-out;
+}
+
+/* Formatando o texto inicial do input */
+#alunoNome::placeholder {
+    color: rgb(176, 176, 176);
+}
+
+/* Formatando input e select QUANDO selecionados.*/
+#alunoNome:focus,
+#alunoTurma:focus {
+    outline: none;
+    border-color: rgb(179, 179, 179);
+}
+
+/* Reajustando o text-align e colocando cor no option */
+option {
+    color: #202020;
+    text-align: initial;
+}
+
+/* */
+
+/* Comportamento do site a parti de 768px de largura*/
+@media (max-width: 768px) {
+
+    /* Ajustando o tamanho da fonte*/
+    .titulo {
+        font-size: 3rem;
+    }
+    /* Ajustando o tamanho da fonte*/
+    .topico {
+        font-size: 1.5rem;
+    }
+}
+
+/* Comportamento do site a parti de 468px de largura*/
+@media (max-width: 468px) {
+
+    /* Ajustando o tamanho da fonte*/
+    .titulo {
+        font-size: 2rem;
+    }
+
+    /* Ajustando o tamanho da fonte*/
+    .topico {
+        font-size: 1rem;
+    }
+    /* Ajustando o espaçamento do container dos alunos*/
+    .container-aluno {
+        padding: 1.2em .9em;
+    }
+
+    /* Ajustando o tamanho da fonte*/ 
+    #alunoNome,
+    #alunoTurma {
+        font-size: .9rem;
+    }
+
+}
